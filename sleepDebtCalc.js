@@ -16,3 +16,12 @@ function getSleepHours(day){
     return 7;
   }
 }
+
+function getActualSleepHours(){
+  sum = 8+7+7+7+6+6+7;
+  return sum;
+}
+
+function getIdealSleepHours(idealHours){
+  return idealHours*7;
+}
