@@ -25,3 +25,17 @@ function getActualSleepHours(){
 function getIdealSleepHours(idealHours){
   return idealHours*7;
 }
+
+function calculateSleepDebt(){
+  const actualSleepHours = getActualSleepHours();
+  const idealSleepHours = getIdealSleepHours(8);
+  if (actualSleepHours == idealSleepHours) {
+    console.log('Perfect amount of sleep!')
+  } else if(actualSleepHours > idealSleepHours) {
+    console.log('The user got '+(actualSleepHours-idealSleepHours)+ ' more hours of sleep than needed.')
+  }else{
+    console.log('The user should get ' +(idealSleepHours - actualSleepHours) +' more hours of rest.')
+  }
+}
+
+calculateSleepDebt();
